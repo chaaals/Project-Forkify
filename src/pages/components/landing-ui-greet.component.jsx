@@ -3,6 +3,8 @@ import styled from "styled-components";
 import GlobalStyles from "../../styles/globalCSS";
 import { colors } from "../../styles/globalCSS";
 
+import { SearchBar } from "./navbar.component";
+
 const GreetContainer = styled.section`
   display: flex;
   align-items: flex-start;
@@ -77,7 +79,7 @@ const Greeting = () => {
         </Description>
       </DescriptionContainer>
 
-      <LandingBtn>START SEARCHING</LandingBtn>
+      <SearchBar state={true} />
     </GreetContainer>
   );
 };
