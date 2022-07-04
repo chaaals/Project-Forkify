@@ -11,7 +11,7 @@ const PageContainer = styled.main`
   display: grid;
   background-color: ${colors.primary};
   max-width: 100%;
-
+  height: 100vh;
   padding: 1rem;
 `;
 
@@ -27,16 +27,6 @@ const LandingUI = styled.section`
   gap: 70px;
 `;
 
-const LandingFooter = styled.footer`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-family: "Roboto";
-  font-size: 1rem;
-  color: ${colors.accent2};
-`;
-
 const ForkifyLanding = () => {
   return (
     <PageContainer>
@@ -48,9 +38,6 @@ const ForkifyLanding = () => {
           <Showcase />
         </LandingUI>
       </LandingUIContainer>
-      <LandingFooter>
-        Redesigned and built with ❤️ by Charles Ching
-      </LandingFooter>
     </PageContainer>
   );
 };
