@@ -11,7 +11,8 @@ const PageContainer = styled.main`
   display: grid;
   background-color: ${colors.primary};
   max-width: 100%;
-  height: 100vh;
+
+  padding: 1rem;
 `;
 
 const LandingUIContainer = styled.section``;
@@ -21,7 +22,7 @@ const LandingUI = styled.section`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 
-  max-width: 80%;
+  max-width: 85%;
   margin: 10vh auto;
   gap: 70px;
 `;
