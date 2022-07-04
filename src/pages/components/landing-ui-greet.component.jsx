@@ -41,6 +41,7 @@ const Description = styled.p`
 `;
 
 const LandingBtn = styled.button`
+  box-sizing: border-box;
   font-size: 1rem;
   padding: 1em 1.5em;
 
@@ -50,6 +51,14 @@ const LandingBtn = styled.button`
 
   border-radius: 10px;
   cursor: pointer;
+
+  &:hover {
+    background-color: ${colors.accent1};
+    color: ${colors.primary};
+    transform: translateY(-4px);
+  }
+
+  transition: 500ms ease-in-out;
 `;
 
 const Greeting = () => {

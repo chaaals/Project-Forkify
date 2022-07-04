@@ -16,7 +16,9 @@ const Nav = styled.nav`
   align-items: center;
   grid-template-columns: repeat(3, 1fr);
 
-  padding: 1.2rem 5rem;
+  padding: 1rem;
+  max-width: 90%;
+  margin: 0 auto;
 `;
 
 const SearchBarContainer = styled.div`
