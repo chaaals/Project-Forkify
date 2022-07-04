@@ -11,14 +11,17 @@ import {
   faBasketShopping,
   faBookmark,
 } from "@fortawesome/free-solid-svg-icons";
+
 const DIContainer = styled.div`
   box-sizing: border-box;
   width: 925px;
 
+  background-color: ${colors.primary};
   border: 2px solid ${colors.accent2};
   border-radius: 20px;
 
-  padding: 1.25rem 0rem;
+  padding: 0rem 0rem 1.25rem 0rem;
+  overflow: hidden;
 `;
 
 const DICover = styled.div`
@@ -27,15 +30,12 @@ const DICover = styled.div`
   height: 370px;
 
   background-color: ${colors.secondary};
-  border-top: 2px solid ${colors.accent2};
   border-bottom: 2px solid ${colors.accent2};
 
   background: url(${(props) => props.url});
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-
-  filter: opacity(70%);
 `;
 
 const DishContent = styled.section`
@@ -62,6 +62,7 @@ const DishAuthor = styled.h4`
 const DishInfoContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
 `;
 
 const DishInfo = styled.section`
@@ -107,19 +108,22 @@ const AddBtn = styled.button`
   align-items: center;
 
   border: none;
-  font-size: 0.8rem;
+  font-size: 1rem;
 
-  padding: 0.8em 1.5em;
+  padding: 0.7em 1.5em;
   border-radius: 10px;
 
-  --size: 35px;
   height: var(--size);
 
   color: ${colors.primary};
   background-color: ${colors.accent2};
 
-  gap: 4px;
+  gap: 6px;
   cursor: pointer;
+
+  .icon {
+    font-size: 0.8rem;
+  }
 
   &:hover {
     background-color: ${colors.accent1};
@@ -127,7 +131,7 @@ const AddBtn = styled.button`
 `;
 
 const BookmarkBtn = styled.button`
-  --size: 35px;
+  --size: 40px;
   border: none;
   font-size: 0.8rem;
 
@@ -144,6 +148,52 @@ const BookmarkBtn = styled.button`
     background-color: ${colors.accent1};
   }
 `;
+
+const InstructionsContainer = styled.section`
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 250px;
+  border: 1px solid ${colors.secondary};
+  border-radius: 20px;
+`;
+
+const InstructionHeading = styled.p`
+  position: absolute;
+  top: -10px;
+
+  font-family: "Roboto";
+  font-size: 1rem;
+
+  background-color: ${colors.primary};
+  color: ${colors.accent1};
+
+  padding: 0em 1em;
+`;
+
+const InstructionContent = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  gap: 30px;
+  width: 80%;
+  margin: 0 auto;
+
+  p {
+    font-family: "Roboto";
+    text-align: center;
+
+    color: ${colors.accent1};
+  }
+`;
+
+const InstructionBtn = styled(AddBtn)``;
 
 const DishIngredient = ({ quantity, ingredient }) => {
   return (
@@ -181,17 +231,28 @@ const DishInformation = ({ dish }) => {
             </DishMainInfo>
 
             {ingJSX}
-
-            <DishBtnContainer>
-              <AddBtn>
-                <FontAwesomeIcon icon={faBasketShopping} />
-                ADD TO LIST
-              </AddBtn>
-              <BookmarkBtn>
-                <FontAwesomeIcon icon={faBookmark} />
-              </BookmarkBtn>
-            </DishBtnContainer>
           </DishInfo>
+
+          <InstructionsContainer>
+            <InstructionHeading>HOW TO COOK IT</InstructionHeading>
+            <InstructionContent>
+              <p>
+                This recipe was carefully designed and tested by{" "}
+                <strong>{dish.author}</strong>. Please check out directions at
+                their website.
+              </p>
+              <InstructionBtn>DIRECTIONS</InstructionBtn>
+            </InstructionContent>
+          </InstructionsContainer>
+          <DishBtnContainer>
+            <AddBtn>
+              <FontAwesomeIcon className="icon" icon={faBasketShopping} />
+              Add to List
+            </AddBtn>
+            <BookmarkBtn>
+              <FontAwesomeIcon icon={faBookmark} />
+            </BookmarkBtn>
+          </DishBtnContainer>
         </DishInfoContainer>
       </DishContent>
     </DIContainer>

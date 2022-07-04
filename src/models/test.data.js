@@ -11,5 +11,12 @@ export const dish = {
     { qty: 1, ing: "Chicken" },
     { qty: 1, ing: "Chicken" },
     { qty: 1, ing: "Chicken" },
+    { qty: 1, ing: "Chicken" },
+    { qty: 1, ing: "Chicken" },
+    { qty: 1, ing: "Chicken" },
+    { qty: 1, ing: "Chicken" },
+    { qty: 1, ing: "Chicken" },
+    { qty: 1, ing: "Chicken" },
+    { qty: 1, ing: "Chicken" },
   ],
 };

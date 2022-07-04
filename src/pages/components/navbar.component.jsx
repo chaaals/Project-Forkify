@@ -40,7 +40,7 @@ const SearchBarContainer = styled.div`
     }
 
     input {
-      width: 65%;
+      width: 75%;
       color: ${colors.accent2};
       opacity: 1;
       cursor: initial;
