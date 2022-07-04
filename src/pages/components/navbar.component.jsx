@@ -7,7 +7,7 @@ import { colors } from "../../styles/globalCSS";
 import { ForkifyLogo } from "../../icons/forkify.icons";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch, faList } from "@fortawesome/free-solid-svg-icons";
+import { faSearch, faBasketShopping } from "@fortawesome/free-solid-svg-icons";
 
 const NavContainer = styled.header``;
 const Nav = styled.nav`
@@ -145,7 +145,7 @@ const ForkifyNav = () => {
             <ForkifyLogo />
           </LogoContainer>
           <RecipeList>
-            <FontAwesomeIcon icon={faList} />
+            <FontAwesomeIcon icon={faBasketShopping} />
           </RecipeList>
         </Nav>
       </NavContainer>
