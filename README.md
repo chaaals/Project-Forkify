@@ -1,4 +1,4 @@
-# Project Forkify
+# Project Forkify(Desktop only)
 
 Final Project on Jonas Schmedtmann's course. Redesigned, and built with ❤️ using ReactJS.
 
