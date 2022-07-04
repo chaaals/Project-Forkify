@@ -35,7 +35,7 @@ const DescriptionContainer = styled.div`
 
 const Description = styled.p`
   font-family: "Roboto";
-  font-size: 32px;
+  font-size: 25px;
 
   color: ${colors.secondary};
 `;
