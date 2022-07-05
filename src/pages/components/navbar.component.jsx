@@ -144,13 +144,13 @@ export const SearchBar = ({ state }) => {
   );
 };
 
-const ForkifyNav = () => {
+const ForkifyNav = ({ navState }) => {
   return (
     <>
       <GlobalStyles />
       <NavContainer>
         <Nav>
-          <SearchBar state={false} />
+          <SearchBar state={navState} />
           <LogoContainer>
             <ForkifyLogo />
           </LogoContainer>

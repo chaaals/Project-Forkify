@@ -17,12 +17,12 @@ const Greet = styled.div`
   color: ${colors.accent2};
   h1 {
     font-family: "Raleway";
-    font-size: 96px;
+    font-size: 86px;
   }
 
   h4 {
     font-family: "Roboto";
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 100;
   }
 
@@ -37,7 +37,7 @@ const DescriptionContainer = styled.div`
 
 const Description = styled.p`
   font-family: "Roboto";
-  font-size: 25px;
+  font-size: 20px;
 
   color: ${colors.secondary};
 `;
@@ -63,7 +63,7 @@ const LandingBtn = styled.button`
   transition: 500ms ease-in-out;
 `;
 
-const Greeting = () => {
+const Greeting = ({ navState }) => {
   return (
     <GreetContainer>
       <GlobalStyles />
@@ -79,7 +79,7 @@ const Greeting = () => {
         </Description>
       </DescriptionContainer>
 
-      <SearchBar state={true} />
+      <SearchBar state={navState} />
     </GreetContainer>
   );
 };

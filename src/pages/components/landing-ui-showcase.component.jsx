@@ -8,7 +8,7 @@ const ContainerOutline = styled.div`
   justify-self: end;
 
   position: relative;
-  --size: 400px;
+  --size: 450px;
 
   width: var(--size);
   height: var(--size);
@@ -20,7 +20,7 @@ const ImgContainer = styled.div`
   position: absolute;
   bottom: 30px;
   right: 30px;
-  --size: 400px;
+  --size: 450px;
 
   width: var(--size);
   height: var(--size);

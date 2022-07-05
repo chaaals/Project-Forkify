@@ -22,7 +22,7 @@ const LandingUI = styled.section`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 
-  max-width: 85%;
+  width: 85%;
   margin: 10vh auto;
   gap: 70px;
 `;
@@ -32,9 +32,9 @@ const ForkifyLanding = () => {
     <PageContainer>
       <LandingUIContainer>
         <GlobalStyles />
-        <Navbar />
+        <Navbar navState={false} />
         <LandingUI>
-          <LandingUIGreet />
+          <LandingUIGreet navState={true} />
           <Showcase />
         </LandingUI>
       </LandingUIContainer>
