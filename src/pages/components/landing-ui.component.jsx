@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import GlobalStyles from "../../styles/globalCSS";
 import styled from "styled-components";
 import { colors } from "../../styles/globalCSS";
@@ -28,13 +28,14 @@ const LandingUI = styled.section`
 `;
 
 const ForkifyLanding = () => {
+  const searchInput = useRef(null);
   return (
     <PageContainer>
       <LandingUIContainer>
         <GlobalStyles />
-        <Navbar navState={false} />
+        <Navbar reference={searchInput} />
         <LandingUI>
-          <LandingUIGreet navState={true} />
+          <LandingUIGreet reference={searchInput} />
           <Showcase />
         </LandingUI>
       </LandingUIContainer>

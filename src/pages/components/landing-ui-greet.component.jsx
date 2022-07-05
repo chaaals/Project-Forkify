@@ -63,7 +63,10 @@ const LandingBtn = styled.button`
   transition: 500ms ease-in-out;
 `;
 
-const Greeting = ({ navState }) => {
+const Greeting = ({ reference }) => {
+  const startSearching = () => {
+    reference.current.focus();
+  };
   return (
     <GreetContainer>
       <GlobalStyles />
@@ -73,13 +76,14 @@ const Greeting = ({ navState }) => {
           Welcome to <span>Forkify</span>
         </h1>
       </Greet>
+
       <DescriptionContainer>
         <Description>
           A recipe finder that helps you plan out your shopping list!
         </Description>
       </DescriptionContainer>
 
-      <SearchBar state={navState} />
+      <LandingBtn onClick={startSearching}>START SEARCHING</LandingBtn>
     </GreetContainer>
   );
 };

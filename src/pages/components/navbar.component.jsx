@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import styled from "styled-components";
 import GlobalStyles from "../../styles/globalCSS";
 
@@ -30,7 +30,6 @@ const SearchBarContainer = styled.div`
   width: var(--size);
   height: var(--size);
 
-  opacity: ${(props) => (props.state ? 1 : 0)};
   &:focus-within {
     width: 100%;
     border: 1px solid ${colors.accent2};
@@ -121,20 +120,15 @@ const RecipeList = styled.div`
   cursor: pointer;
 `;
 
-export const SearchBar = ({ state }) => {
-  const searchInput = useRef(null);
-  useEffect(() => {
-    searchInput.current.focus();
-  }, []);
-
+export const SearchBar = ({ reference }) => {
   return (
     <>
       <GlobalStyles />
-      <SearchBarContainer state={state}>
+      <SearchBarContainer>
         <Search
           type="text"
           placeholder="Start searching for a recipe"
-          ref={searchInput}
+          ref={reference}
         />
         <SearchBtn>
           <FontAwesomeIcon icon={faSearch} />
@@ -144,13 +138,13 @@ export const SearchBar = ({ state }) => {
   );
 };
 
-const ForkifyNav = ({ navState }) => {
+const ForkifyNav = ({ reference }) => {
   return (
     <>
       <GlobalStyles />
       <NavContainer>
         <Nav>
-          <SearchBar state={navState} />
+          <SearchBar reference={reference} />
           <LogoContainer>
             <ForkifyLogo />
           </LogoContainer>
